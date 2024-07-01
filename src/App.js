@@ -1,18 +1,15 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import BlogPostPreview from "./BlogPostPreview";
-import BlogPostPage from "./BlogPostPage.jsx";
-import HomePage from "./HomePage.jsx";
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./Screens/Homepage";
+import BlogPostPage from "./Screens/BlogPostPage";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" component={<HomePage />} />
-        <Route path="/blog/:id" component={<BlogPostPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/Blogs" element={<BlogPostPage />} />
+    </Routes>
   );
 };
 
